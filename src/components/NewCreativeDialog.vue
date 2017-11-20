@@ -56,6 +56,8 @@
             <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
           </p>
           <button class="btn btn-default" @click="animate">Animate</button>
+          <button class="btn btn-default" @click="animateFall">Animate fall</button>
+
         </div>
 
         <div class="mastfoot">
@@ -83,6 +85,7 @@
         timeFactor: 5,
         angle: Math.PI / 3, //45 degrees
         startTimestamp: null,
+        mirrorFigure: false,
         figurePosition: [150, 152]
       }
     },
@@ -91,7 +94,11 @@
     },
     computed: {
       figureStyle() {
-        return `transform: translate(${this.figurePosition[0]}px, ${this.figurePosition[1]}px)`
+        let position = `transform: translate(${this.figurePosition[0]}px, ${this.figurePosition[1]}px)`
+        if (this.mirrorFigure) {
+          return position + ' scale(-1, -1)'
+        }
+        return position;
       }
     },
     methods: {
@@ -106,12 +113,27 @@
         this.initialPosition = _.clone(this.figurePosition);
         window.requestAnimationFrame(this.animationStep);
       },
+      animateFall() {
+        this.startTimestamp = null;
+        this.initialPosition = _.clone(this.figurePosition);
+        window.requestAnimationFrame(this.animationStepFall);
+      },
       animationStep(timestamp) {
         if (!this.startTimestamp) this.startTimestamp = timestamp;
         let t = this.timeFactor * (timestamp - this.startTimestamp) / 1000;
         this.figurePosition = [this.initialPosition[0] + this.xt(t), this.initialPosition[1] - this.yt(t)];
         if (t < 4) {
           window.requestAnimationFrame(this.animationStep);
+        }
+      },
+      animationStepFall(timestamp) {
+        if (!this.startTimestamp) this.startTimestamp = timestamp;
+        let t = this.timeFactor * (timestamp - this.startTimestamp) / 1000;
+        this.mirrorFigure = !!(Math.floor(t)%2);
+        this.figurePosition = [this.initialPosition[0] + this.xt(t), this.initialPosition[1] - this.yt(t)];
+
+        if (t < 10) {
+          window.requestAnimationFrame(this.animationStepFall);
         }
       }
     }
