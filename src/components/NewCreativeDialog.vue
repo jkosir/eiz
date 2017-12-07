@@ -43,7 +43,7 @@
 
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Glasba</h3>
+            <h3 class="masthead-brand">Vadnica lestvic</h3>
             <nav class="nav nav-masthead">
               <a class="nav-link active" href="#">Home</a>
               <a class="nav-link" href="#">Features</a>
@@ -68,32 +68,32 @@
           <svg width="500px" viewBox="0 0 1120 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="piano-keyboard">
               <g id="octave-1">
-                <rect @click="press" id="octave-1-C-key" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-D-key" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-E-key" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-F-key" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-G-key" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FF0000" x="320" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-A-key" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-H-key" class="piano-key white-key" data-piano-key="H" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-1-C#-key" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-1-D#-key" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-1-F#-key" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-1-G#-key" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-1-A#-key" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-1-C-key" class="piano-key white-key" data-piano-key="C3" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-D-key" class="piano-key white-key" data-piano-key="D3" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-E-key" class="piano-key white-key" data-piano-key="E3" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-F-key" class="piano-key white-key" data-piano-key="F3" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-G-key" class="piano-key white-key" data-piano-key="G3" stroke="#555555" fill="#FF0000" x="320" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-A-key" class="piano-key white-key" data-piano-key="A3" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-H-key" class="piano-key white-key" data-piano-key="B3" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-1-C#-key" class="piano-key black-key" data-piano-key="C#3" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-1-D#-key" class="piano-key black-key" data-piano-key="D#3" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-1-F#-key" class="piano-key black-key" data-piano-key="F#3" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-1-G#-key" class="piano-key black-key" data-piano-key="G#3" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-1-A#-key" class="piano-key black-key" data-piano-key="A#3" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
               </g>
               <g id="octave-2" transform="translate(560.000000, 0.000000)">
-                <rect @click="press" id="octave-2-C-key" class="piano-key white-key" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-D-key" class="piano-key white-key" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-E-key" class="piano-key white-key" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-F-key" class="piano-key white-key" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-G-key" class="piano-key white-key" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-A-key" class="piano-key white-key" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-H-key" class="piano-key white-key" data-piano-key="H" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
-                <rect @click="press" id="octave-2-C#-key" class="piano-key black-key" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-2-D#-key" class="piano-key black-key" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-2-F#-key" class="piano-key black-key" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-2-G#-key" class="piano-key black-key" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
-                <rect @click="press" id="octave-2-A#-key" class="piano-key black-key" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-2-C-key" class="piano-key white-key" data-piano-key="C4" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-D-key" class="piano-key white-key" data-piano-key="D4" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-E-key" class="piano-key white-key" data-piano-key="E4" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-F-key" class="piano-key white-key" data-piano-key="F4" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-G-key" class="piano-key white-key" data-piano-key="G4" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-A-key" class="piano-key white-key" data-piano-key="A4" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-H-key" class="piano-key white-key" data-piano-key="B4" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
+                <rect @click="press" id="octave-2-C#-key" class="piano-key black-key" data-piano-key="C#4" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-2-D#-key" class="piano-key black-key" data-piano-key="D#4" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-2-F#-key" class="piano-key black-key" data-piano-key="F#4" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-2-G#-key" class="piano-key black-key" data-piano-key="G#4" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
+                <rect @click="press" id="octave-2-A#-key" class="piano-key black-key" data-piano-key="A#4" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
               </g>
             </g>
           </svg>
@@ -105,13 +105,6 @@
           <button class="btn btn-default" @click="animateFall">Animate fall</button>
         </div>
 
-        <div class="mastfoot">
-          <div class="inner">
-            <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a
-                href="https://twitter.com/mdo">@mdo</a>.</p>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -121,13 +114,14 @@
 
 <script>
   import _ from "lodash";
+  import Tone from 'tone';
 
   export default {
     data() {
       return {
         v0: 50, //m/s
         g: 20,
-        lestvica: ['G','A','H','C', 'D', 'E', 'F#', 'G'],
+        lestvica: ['G3','A3','B3','C4', 'D4', 'E4', 'F#4', 'G4'],
         idx: 0,
         timeFactor: 5,
         angle: Math.PI / 3, //45 degrees
@@ -139,6 +133,7 @@
     },
     created() {
       this.$nextTick(() => this.figure = this.$el.querySelector('#figure'));
+      this.synth = new Tone.Synth().toMaster();
     },
     computed: {
       figureStyle() {
@@ -174,7 +169,7 @@
         if (!this.startTimestamp) this.startTimestamp = timestamp;
         let t = this.timeFactor * (timestamp - this.startTimestamp) / 1000;
         this.figurePosition = [this.initialPosition[0] + this.xt(t), this.initialPosition[1] - this.yt(t)];
-        if (t < 4) {
+        if (t < 3.9) {
           window.requestAnimationFrame(this.animationStep);
         }
       },
@@ -190,6 +185,7 @@
       },
       press (ev){
         console.log(ev.target.dataset.pianoKey)
+        this.synth.triggerAttackRelease(ev.target.dataset.pianoKey, "8n");
         if (this.lestvica[this.idx++] === ev.target.dataset.pianoKey){
           this.animate()
         } else {
