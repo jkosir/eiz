@@ -20,6 +20,14 @@
       position: absolute;
       height: 14px;
     }
+    img.note {
+      position: absolute;
+      height: 26px;
+    }
+    img.visaj {
+      position: absolute;
+      height: 40px;
+    }
   }
 
   .piano-key {
@@ -59,6 +67,16 @@
           <img v-for="(pos, idx) in lestvica.positions"
                class="platform" src="/assets/images/platform.gif" alt=""
                :style="'transform: translate('+(150+100*idx)+'px,'+positions[pos]+'px)'">
+          <img v-for="(pos, index) in lestvica.positions.slice(0,idx)"
+               class="visaj"
+               v-if="lestvica.tones[index].includes('#')"
+               src="/assets/images/visaj_t.gif"
+               :style="'transform: translate('+(115+100*index)+'px,'+(positions[pos]-32)+'px)'">
+          <img v-for="(pos, index) in lestvica.positions.slice(0,idx)"
+               class="note"
+               src="/assets/images/nota.png" alt=""
+               :style="'transform: translate('+(150+100*index)+'px,'+(positions[pos]-27)+'px)'">
+
           <img id="figure" src="/assets/images/mario.png" alt="" class="figure"
                :style="figureStyle">
           <img class="board" src="/assets/images/crtovje.PNG" alt="">
@@ -124,7 +142,8 @@
 
         </div>
         <div class="inner cover">
-          <button class="btn btn-default" @click="playAgain">Play again</button>
+          <button class="btn btn-default" @click="playAgain">Nova igra</button>
+          <button class="btn btn-default" @click="zaigrajLestvico">Poslušaj lestvico</button>
         </div>
 
       </div>
@@ -234,10 +253,16 @@
           window.requestAnimationFrame(this.animationStepFall);
         }
       },
+      zaigrajLestvico () {
+        _.each(this.lestvica.tones, (t, idx)=>{
+          setTimeout(()=>this.synth.triggerAttackRelease(t, "8n"), idx*500)
+        })
+      },
       press(ev) {
         if (this.lestvica.tones[this.idx] === ev.target.dataset.pianoKey) {
           this.synth.triggerAttackRelease(ev.target.dataset.pianoKey, "8n");
           this.animate()
+          this.idx++
         } else {
           this.animateMiniJump();
           this.lives--;
@@ -249,7 +274,6 @@
             setTimeout(this.playAgain, 2000)
           }
         }
-        this.idx++
       }
     }
   }
