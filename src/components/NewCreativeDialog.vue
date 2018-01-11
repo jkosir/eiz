@@ -263,6 +263,11 @@
           this.synth.triggerAttackRelease(ev.target.dataset.pianoKey, "8n");
           this.animate()
           this.idx++
+          if (this.idx === 8){
+            console.log('win')
+            let player = new Tone.Player('/assets/sounds/win.mp3').toMaster()
+            player.autostart = true
+          }
         } else {
           this.animateMiniJump();
           this.lives--;
